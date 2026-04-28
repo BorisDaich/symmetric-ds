@@ -20,3 +20,33 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Build outputs (Gradle / Maven / Eclipse)
+**/build/
+**/bin/
+**/target/
+**/out/
+**/.gradle/
+*.class
+*.jar
+*.war
+*.ear
+*.tar
+*.zip
+
+# Eclipse / IDE metadata
+**/.classpath
+**/.project
+**/.settings/
+**/.factorypath
+**/.apt_generated/
+**/.springBeans
+*.iml
+
+# Build temp / logs
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# Allow build.gradle even if it lives under bin/ (some modules check it in)
+!**/bin/build.gradle
