@@ -20,8 +20,6 @@
  */
 package org.jumpmind.symmetric.job;
 
-import static org.jumpmind.symmetric.job.JobDefaults.EVERY_FIFTEEN_MINUTES;
-
 import org.apache.commons.lang3.StringUtils;
 import org.jumpmind.db.sql.ISqlTemplate;
 import org.jumpmind.symmetric.ISymmetricEngine;
@@ -100,11 +98,6 @@ public class JavaJob extends AbstractJob {
 
     public void setSqlTemplate(ISqlTemplate sqlTemplate) {
         this.sqlTemplate = sqlTemplate;
-    }
-
-    @Override
-    protected long getMinSchedulePeriodMs() {
-        return Long.parseLong(EVERY_FIFTEEN_MINUTES);
     }
 
     @Override

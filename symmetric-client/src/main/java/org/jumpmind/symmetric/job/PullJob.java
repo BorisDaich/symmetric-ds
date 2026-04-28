@@ -45,11 +45,6 @@ public class PullJob extends AbstractJob {
     }
 
     @Override
-    protected long getMinSchedulePeriodMs() {
-        return Long.parseLong(EVERY_FIFTEEN_MINUTES);
-    }
-
-    @Override
     public boolean isRateLimited() {
         return true;
     }

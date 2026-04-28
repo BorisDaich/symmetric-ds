@@ -20,8 +20,6 @@
  */
 package org.jumpmind.symmetric.job;
 
-import static org.jumpmind.symmetric.job.JobDefaults.EVERY_FIFTEEN_MINUTES;
-
 import org.jumpmind.symmetric.ISymmetricEngine;
 import org.jumpmind.symmetric.model.JobDefinition.JobType;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
@@ -55,11 +53,6 @@ public class BshJob extends AbstractJob {
     @Override
     public JobDefaults getDefaults() {
         return new JobDefaults();
-    }
-
-    @Override
-    protected long getMinSchedulePeriodMs() {
-        return Long.parseLong(EVERY_FIFTEEN_MINUTES);
     }
 
     @Override
